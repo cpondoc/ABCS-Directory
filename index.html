@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Home | ABCS Directory</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="imgs/fnlcr.png">
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bec992c53a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="container text-center" align-items="center" id="main-content">
+                <br />
+                    <h1 class="ribbon">
+                            <a class="ribbon-content">{{ title }}</a>
+                    </h1>
+                    <br />
+                    <br />
+                    <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="index.html"><i class="fas fa-home"></i>   Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="subpages/statistics.html"><i class="fas fa-chart-pie"></i>   Statistics</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="subpages/about.html"><i class="fas fa-address-card"></i>   About</a>
+                            </li>
+                          </ul>
+                    <br />
+                    <h4 id="description"> {{ description }}</h4>
+            </div>
+            <br />
+            <div class="container text-center" align-items="center" id="main-content" v-for="cool in cools">
+                <plan :name_1="cool.name_1" :work_1="cool.work_1" :image_1="cool.image_1" :quote_1="cool.quote_1" :duties_1="cool.duties_1" :skills_1="cool.skills_1" :enjoy_1="cool.enjoy_1" :least_1="cool.least_1" :education_1="cool.education_1" :application_1="cool.application_1" :name_2="cool.name_2" :work_2="cool.work_2" :image_2="cool.image_2" :quote_2="cool.quote_2" :duties_2="cool.duties_2" :skills_2="cool.skills_2" :enjoy_2="cool.enjoy_2" :least_2="cool.least_2" :education_2="cool.education_2" :application_2="cool.application_2"></plan>
+                <br />
+            </div>
+        </div>
+        <script type="text/x-template" id="plan-template">
+            <div class="row">
+                <div class="col-md">
+                        <div class="card shadow-lg p-3 mb-5 rounded">
+                            <div class="card-body">
+                                <img id="profile" v-bind:src="image_1" />
+                                <br />
+                                <br />
+                                <h3 class="card-title">{{name_1}}</h3>
+                                <br />
+                                <p class="card-text">
+                                    <a href="#" id="role" class="btn btn-primary">{{work_1}}</a>
+                                    <br/>
+                                    <br/>
+                                    <div class="left">
+                                        <p><u>Primary Job Duties:</u> {{duties_1}}</p>
+                                        <p><u>Skills for Success:</u> {{skills_1}}</p>
+                                        <p><u>Most Enjoyable Aspect:</u> {{enjoy_1}}</p>
+                                        <p><u>Least Enjoyable Aspect:</u> {{least_1}}</p>
+                                        <p><u>Education Necessary:</u> {{education_1}}</p>
+                                        <p><u>Impetus for Applying:</u> {{application_1}}</p>
+                                    </div>
+                                </p>
+                                <br />
+                                <blockquote> "{{quote_1}}" </blockquote>
+                            </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md">
+                        <div class="card shadow-lg p-3 mb-5 rounded">
+                            <div class="card-body">
+                                <img id="profile" v-bind:src="image_2" />
+                                <br />
+                                <br />
+                                <h3 class="card-title">{{name_2}}</h3>
+                                <br />
+                                <p class="card-text">
+                                    <a id="role" href="#" class="btn btn-primary">{{work_2}}</a>
+                                    <br/>
+                                    <br/>
+                                    <div class="left">
+                                            <p><u>Primary Job Duties:</u> {{duties_2}}</p>
+                                            <p><u>Skills for Success:</u> {{skills_2}}</p>
+                                            <p><u>Most Enjoyable Aspect:</u> {{enjoy_2}}</p>
+                                            <p><u>Least Enjoyable Aspect:</u> {{least_2}}</p>
+                                            <p><u>Education Necessary:</u> {{education_2}}</p>
+                                            <p><u>Impetus for Applying:</u> {{application_2}}</p>
+                                    </div>
+                                </p>
+                                <br />
+                                <blockquote> "{{quote_2}}" </blockquote>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+</script>
+        <script src="script/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7 /umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
