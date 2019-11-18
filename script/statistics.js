@@ -52,19 +52,19 @@ new Chart(document.getElementById("bar-chart"), {
 new Chart(document.getElementById("doughnut-chart"), {
     type: 'doughnut',
     data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      labels: ["Manager", "CEO and Consultant", "Bioinformatics Analyst", "Programmer Analyst", "Principal Scientist", "Postdoctoral Fellow", "Director", "Secretary II", "Guest Researcher/Assistant Professor"],
       datasets: [
         {
-          label: "Population (millions)",
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+          label: "People",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#a98ef2", "#12b7a3", "#596489", "#e4d5d3"],
+          data: [1,1,4,2,1,1,1,1, 1]
         }
       ]
     },
     options: {
       title: {
         display: true,
-        text: 'Predicted world population (millions) in 2050'
+        text: 'Breakdown of Employee Roles'
       }
     }
 });
