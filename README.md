@@ -2,7 +2,7 @@
 # ABCS Directory
 🔬 Directory of the Advanced Biomedical Computational Science at the Frederick National Lab for Cancer Research.
 
-![Screenshot](imgs/Screen Shot 2019-11-25 at 1.19.21 AM.png)
+![Screenshot](imgs/screenshot.png)
 
 ## Motivation
 I was tasked with an intern project to interview the employees around my internship and talk to them about their educational background, favorite and least parts of the job, and more. Overall, I was able to talk with upwards of 10+ employees, all of whom exuded a fiery passion about their job.
